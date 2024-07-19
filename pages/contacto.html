@@ -30,7 +30,7 @@
 	<body>
 		<!-- Cabecera -->
 		<header>
-			<nav class="navbar navbar-expand-lg bg-light">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 				<div class="container-fluid">
 					<a class="navbar-brand" href="../index.html">
 						<img
@@ -76,21 +76,70 @@
 		<!-- Contenido principal -->
 		<main>
 			<!-- Titulo de sección -->
-			<h1 class="mb-5 mt-3 text-center">TITULO</h1>
+			<h1 class="mb-5 mt-3 text-center">Contacto</h1>
 			<!-- Párrafo -->
 			<section class="container">
-				<p class="ms-5 mt-3">PARRAFO</p>
+				<p class="ms-5 mt-3">
+					¿Tenés una pregunta sobre nuestros productos? Ponéte en contacto ya y
+					nosotros te asesoramos!
+				</p>
 			</section>
 			<!-- Formulario de contacto -->
-			<section class="container">
-				<form action="">
-					<p>FORMULARIO</p>
+			<section class="container mb-5">
+				<form class="p-5 m-5 w-75" id="contact-form">
+					<div class="mb-3">
+						<label for="name-input" class="form-label" id="name-label"
+							>Nombre Completo</label
+						>
+						<input
+							type="text"
+							class="form-control"
+							id="name-input"
+							placeholder="nombre apellido"
+							oninput="removeNumbers(this)"
+							aria-labelledby="name-label"
+							aria-describedby="notification"
+							required
+						/>
+					</div>
+					<div class="mb-3">
+						<label for="email-input" class="form-label" id="email-label"
+							>Email address</label
+						>
+						<input
+							type="email"
+							class="form-control"
+							id="email-input"
+							placeholder="usuario@dominio.com"
+							aria-labelledby="email-label"
+							aria-describedby="notification"
+							required
+						/>
+					</div>
+					<div class="mb-3">
+						<label for="message-input" class="form-label" id="message-label"
+							>Mensaje</label
+						>
+						<textarea
+							class="form-control"
+							id="message-input"
+							rows="3"
+							placeholder="dejanos tu mensaje"
+							aria-labelledby="message-label"
+							aria-describedby="notification"
+							required
+						></textarea>
+					</div>
+					<div id="notification"></div>
+					<button type="submit" id="send-btn" class="btn btn-primary mb-3">
+						Enviar
+					</button>
 				</form>
 			</section>
 		</main>
 
 		<!-- Pie de página -->
-		<footer class="mt-3 mb-1">
+		<footer class="mt-3 mb-1 bg-dark p-2 text-dark bg-opacity-25">
 			<div class="container-fluid">
 				<div class="row text-center">
 					<div class="col-12 col-md-4">
@@ -127,7 +176,7 @@
 						</div>
 					</div>
 
-					<div class="col-12 col-md-4 fw-bold copyright-element">
+					<div class="col-12 col-md-4 fw-bold copyright-element p-4">
 						&copy Desarrollo 2024
 					</div>
 
@@ -154,7 +203,7 @@
 			</div>
 		</footer>
 
-		<script src="../js/scripts.js"></script>
+		<script src="../js/contact-script.js"></script>
 		<!-- Bootstrap -->
 		<script
 			src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
