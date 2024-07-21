@@ -6,7 +6,7 @@ const sendMessage = (message) => {
 	notification.innerHTML = '';
 	const div = document.createElement('div');
 	div.innerHTML = `
-    <div class="alert alert-info" role="alert">${message}</div>
+    <div class="alert alert-warning" role="alert">${message}</div>
     `;
 	notification.appendChild(div);
 	setTimeout(function () {
@@ -18,8 +18,16 @@ const validField = () => {
 	const nameInput = document.getElementById('name-input').value;
 	const emailInput = document.getElementById('email-input').value;
 	const messageInput = document.getElementById('message-input').value;
+	const regex = /^\s+$/;
 
-	if (!nameInput || !emailInput || !messageInput) {
+	if (
+		!nameInput ||
+		!emailInput ||
+		!messageInput ||
+		regex.test(nameInput) ||
+		regex.test(emailInput) ||
+		regex.test(messageInput)
+	) {
 		sendMessage('Todos los campos del formulario son obligatorios');
 		return false;
 	}
@@ -27,9 +35,11 @@ const validField = () => {
 };
 
 const validEmail = (email) => {
-	let emailRegex = /\S+@\S+\.\S+/;
+	let emailRegex = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/;
 	if (!emailRegex.test(email)) {
-		sendMessage('El formato del email no es válido');
+		sendMessage(
+			'El formato del email no es válido. Ejemplo válido: usuario@dominio.com'
+		);
 		return false;
 	}
 	return true;
@@ -41,7 +51,7 @@ const removeNumbers = (input) => {
 	if (numbersRegex.test(content)) {
 		content = content.replace(numbersRegex, '');
 		input.value = content;
-		sendMessage('Solo se admiten letras en el campo nombre completo');
+		sendMessage('No se admiten números en el campo nombre completo');
 	}
 };
 
