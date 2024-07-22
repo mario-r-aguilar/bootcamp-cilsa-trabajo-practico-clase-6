@@ -1,4 +1,5 @@
 const contrastBtn = document.getElementById('contrast-btn');
+const isModal = document.querySelector('.modalContrast');
 
 const darkMode = () => {
 	document.body.classList.add('bg-dark');
@@ -7,6 +8,12 @@ const darkMode = () => {
 		element.classList.remove('text-dark');
 		element.classList.add('text-light');
 	});
+
+	if (isModal) {
+		document.querySelectorAll('.modalContrast').forEach((element) => {
+			element.classList.add('bg-dark');
+		});
+	}
 	localStorage.setItem('contrastMode', 'dark');
 };
 
@@ -17,6 +24,11 @@ const lightMode = () => {
 		element.classList.remove('text-light');
 		element.classList.add('text-dark');
 	});
+	if (isModal) {
+		document.querySelectorAll('.modalContrast').forEach((element) => {
+			element.classList.remove('bg-dark');
+		});
+	}
 	localStorage.setItem('contrastMode', 'light');
 };
 
