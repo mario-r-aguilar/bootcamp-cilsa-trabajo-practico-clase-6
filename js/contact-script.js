@@ -35,7 +35,7 @@ const validField = () => {
 };
 
 const validEmail = (email) => {
-	let emailRegex = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)/;
+	let emailRegex = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
 	if (!emailRegex.test(email)) {
 		sendMessage(
 			'El formato del email no es válido. Ejemplo válido: usuario@dominio.com'
