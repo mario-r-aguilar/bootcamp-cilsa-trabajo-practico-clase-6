@@ -2,7 +2,9 @@
 
 ## Descripción
 
-Se trata de un sitio web responsive que forma parte de los trabajos prácticos que se van planteando a lo largo del bootcamp dictado por Cilsa. El nombre elegido y el contenido son ficción y solo es utilizado para la realización de la práctica.
+Este proyecto forma parte de los trabajos prácticos que se van solicitando a lo largo del bootcamp
+dictado por Cilsa. Tanto el nombre de la empresa como el contenido son de fantasía y solo es utilizado
+con fines de práctica.
 
 ## Estructura del sitio
 
