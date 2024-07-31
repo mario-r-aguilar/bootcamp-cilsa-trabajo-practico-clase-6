@@ -1,6 +1,11 @@
-# QuantumFusion X GAMING - Sitio web gammer para ventas de insumos
+# Proyecto en Duplas - QuantumFusion X GAMING
 
-## Descripción
+## Integrantes
+
+- **[Dardo Santana](https://github.com/dardosantana)**
+- **[Mario Aguilar](https://github.com/mario-r-aguilar)**
+
+## Objetivo
 
 Este proyecto forma parte de los trabajos prácticos que se van solicitando a lo largo del bootcamp
 dictado por Cilsa. Tanto el nombre de la empresa como el contenido son de fantasía y solo es utilizado
@@ -8,7 +13,7 @@ con fines de práctica.
 
 ## Estructura del sitio
 
-El sitio consta de 3 páginas: Inicio, Perfil y Contacto.
+El sitio se trata de una web gammer para ventas de insumos y consta de 3 páginas: Inicio, Perfil y Contacto.
 
 **Inicio**: Posee un mensaje de bienvenida y un carrusel de imágenes de los servicios ofrecidos.
 **Perfil**: Contiene la historia de la empresa y detalles de los responsables de la misma, dentro de cards que además permiten la apertura de un modal con más información al respecto (información ficticia).
